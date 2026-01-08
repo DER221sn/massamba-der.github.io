@@ -1593,6 +1593,11 @@ body {
   padding: 0;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
+.portfolio-content img {
+  width: 100%;
+  height: 250px; /* Force une hauteur identique */
+  object-fit: cover; /* Recadre l'image proprement sans l'écraser */
+}
 
 /*--------------------------------------------------------------
 # Service Details Section
@@ -1678,4 +1683,25 @@ body {
 /* Assure que l'image ne cache pas le texte */
 .portfolio .portfolio-content img {
   filter: brightness(0.8);
+}
+/* Amélioration de la texture des images du portfolio */
+.portfolio-content {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 10px 30px rgba(0, 212, 255, 0.15); /* Ombre bleutée subtile */
+  transition: all 0.3s ease-in-out;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.portfolio-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 15px 35px rgba(0, 212, 255, 0.3);
+  border-color: #00d4ff;
+}
+
+/* Texture pour la photo de profil du CV */
+.profile-photo {
+  border: 4px solid #00d4ff;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  filter: brightness(1.05) contrast(1.02); /* Améliore légèrement le rendu visuel */
 }
